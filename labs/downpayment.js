@@ -16,4 +16,3 @@ function calcDownpayment(cost) {
   console.log("expect 2500: ", calcDownpayment(50000));
   console.log("expect 7500: ", calcDownpayment(100000));
   console.log("expect 5000: ", calcDownpayment(200000));
-  
