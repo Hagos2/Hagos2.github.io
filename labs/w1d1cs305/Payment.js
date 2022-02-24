@@ -13,6 +13,8 @@ input: cost of house
 process: calculate DownPayment
 outPut:DownPayment
 */
+"use strict";
+
 const cost= input("enter the home loan");
 let downPayment;
 

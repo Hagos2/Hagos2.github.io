@@ -1,3 +1,14 @@
+"use strict";
+const assert = require("assert");
+
+
+ module.exports={computeSalesCommission};
+/**
+ * 
+ * @param {boolean} isSalaried is the first boolean.
+ * @param {int} salesAmount the first number.
+ * @returns {int} number. 
+ */
 function computeSalesCommission(isSalaried, salesAmount) {
     let commission;
     if (isSalaried == true) {

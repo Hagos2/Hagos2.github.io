@@ -1,3 +1,11 @@
+"use strict";
+
+ /**
+  * 
+  * @param {int} cost  is given number
+  * @returns {int}downPayment is the result number.
+  */
+
 function calcDownpayment(cost) {
     let downPayment;
     if (cost < 0) return;

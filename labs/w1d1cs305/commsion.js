@@ -7,6 +7,9 @@
 • 2% for sales between $300 and $500 (exclusive)
 • 3% for sales above $500
 */
+/**
+ 
+ */
 let commission;
 let sales;
 if(isSalaried){
