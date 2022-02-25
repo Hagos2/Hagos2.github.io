@@ -119,3 +119,42 @@ function scoreExams(studentAnswers, correctAnswers) {
   }
   return score;
 }
+"use strict";
+/**
+ * 
+ * @param {int} num1 is the firstnumber.
+ * @param {int} num2 is the second number.
+ * @returns{Array} return an array.
+ */
+ function generateArray(num1, num2) {
+
+  let arr = [];
+  
+  if(num1 < 0 || num2 < 0) throw "Illegal Arguments";
+  
+  if(num1 == 0 && num2 == 0) return arr;
+  
+  let inArr = [];
+  
+  for(let i = 1; i <= num1 * num2; i++) {
+  
+  inArr.push(i);
+  
+  if(i % num2 == 0) {
+  
+  arr.push(inArr);
+  
+  
+  
+  inArr=[];
+  
+  }
+  
+  }
+  
+  return arr;
+  
+  }
+console.log(generateArray(3,3));
+console.log(generateArray(2,3));
+console.log(generateArray(2,1));

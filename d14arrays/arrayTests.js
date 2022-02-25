@@ -12,6 +12,7 @@ const findLongestWord = myExports.findLongestWord;
 const reverseArray = myExports.reverseArray;
 const reverseArrayInPlace = myExports.reverseArrayInPlace;
 const scoreExams = myExports.scoreExams;
+const generateArray=myExports.generateArray;
 */
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
@@ -165,5 +166,20 @@ describe("score exam", function () {
       ),
       [3, 2, 4]
     );
+  });
+});
+/* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
+describe("generate array", function () {
+  const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
+  const expected23 = [ [1, 2, 3], [4, 5, 6]];
+  const expected21 = [ [1], [2]];
+  it("expected33", function () {
+      assert.deepEqual(generateArray(3,3), expected33);
+  });
+  it("expected23", function () {
+      assert.deepEqual(generateArray(2,3), expected23);
+  });
+  it("expected21", function () {
+      assert.deepEqual(generateArray(2, 1), expected21);
   });
 });
