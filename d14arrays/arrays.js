@@ -8,6 +8,8 @@ module.exports = {
   reverseArray,
   reverseArrayInPlace,
   scoreExams,
+  generateArray,
+
 }; *
 
 /**
