@@ -64,11 +64,11 @@ function addBook(title,author,libraryID){
  */
 function showAuthors() {
 
-    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+    /* put all author into an array, then sort, then join with newline and insert in textarea innerHTML */
 
     const authors = findAuthors();
 
-    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    /*need to sort and then join the author still (e.g., someArray.join("\n")  */
     authors.sort();
     const authorsString = authors.join("\n");
 
@@ -87,12 +87,32 @@ function findAuthors() {
     }
     return authors;
   }
+  
+/**
+ * Event handler to display library ids sorted alphabetically
+ * @returns {undefined}
+ */
+  function showIDs() {
+
+    /* put all ids into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const ids = findIDs();
+
+    /*need to sort and then join the author still (e.g., someArray.join("\n")  */
+    ids.sort();
+    const idsString = ids.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = idsString;
+}
+
   /**
    * 
    * @returns {number}return the id
    */
   function findIDs() {
     let ids = [];
+    ids=["3245"];
     for (let i = 0; i < library.length; i++) {
       ids[i] = library[i].libraryID;
     }
