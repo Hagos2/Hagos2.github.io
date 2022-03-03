@@ -1,18 +1,25 @@
 "use strict";
-module.exports = {Calculator };
+module.exports = {calculator };
+
+
+const calculator = {a: 0, b: 0};
+
+calculator.sum = function(){
+  return this.a + this.b;
+};
 /**
  * @returns{number}returns number
  */
-function Calculator() {
-    this.setValues = function (a, b) {
-      this.a = a;
-      this.b = b;
-    };
+// function Calculator() {
+//     this.setValues = function (a, b) {
+//       this.a = a;
+//       this.b = b;
+    ///};
   
     this.sum = function () {
       return this.a + this.b;
     };
-  
+
     this.mul = function () {
       return this.a * this.b;
     };
@@ -23,7 +30,7 @@ function Calculator() {
     this.div = function () {
       return this.a / this.b;
     };
-  }
+  
   
   
 
