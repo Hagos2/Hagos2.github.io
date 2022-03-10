@@ -49,5 +49,4 @@ console.log(findMin(1,2,3,4));
 let Obj3 = {...obj1,...obj2};
 return Obj3;
  }
- let obj1 = {prop1: 1, prop2: 2};
- let obj2 = {prop3: 1, prop4: 2};
+ 

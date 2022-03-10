@@ -56,3 +56,18 @@ let triple1 = function (arg) {
 let triple2 = (arg) => {
   return 3 * arg;
 };
+/**
+ * 
+ */
+function log() { console.log("No Arguments");
+}
+function log(x) {
+console.log("1 Argument: " + x); }
+// function log(x, y) {
+// console.log("2 Arguments: " + x + ", " + y);
+// }
+log(); 
+log(5); 
+log(6, 7);
+let str = "Hello";
+console.log( [...str] ); // H,e,l,l,o
