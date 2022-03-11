@@ -240,7 +240,7 @@ function swap2(arr, i, j){
 }
 
 //Q14
-unction isSumFirstLastOdd(n) {
+function isSumFirstLastOdd(n) {
 
     while (n >= 10) {
   
