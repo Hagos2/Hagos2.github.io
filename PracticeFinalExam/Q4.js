@@ -76,7 +76,7 @@ function reverseAll(str){
    console.log(reverseAll("Hi how are you!"));
    
 //Q6   
-unction isSumBalanced(arr) {
+function isSumBalanced(arr) {
     let sumE = 0;
     let SumO = 0
 
