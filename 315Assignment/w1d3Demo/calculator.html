@@ -1,61 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<label>First value</label>
-<br><br>
-
-<input type="number" id="firstvalue" value="">
-<br><br>
-<label>Second value</label>
-<br><br>
-<input type="number" id="secondvalue" value="">
-<br><br>
-<label>operations:</label>
-<br><br>
-
-<input class="myClass" id="id" type="button" onclick="add()" value="+"/>
-<input class="myClass" id="id" type="button" onclick="subtraction()" value="-"/>
-<input class="myClass" id="id" type="button" onclick=" multipulication()" value="*"/>
-<br><br>
-<label>result</label>
-<label class="finaly"></label>
-<script>
-    function add(){
-    let firstvalue= document.getElementById("firstvalue");
-    let secondvalue= document.getElementById("secondvalue");
-    console.log(firstvalue,secondvalue)
-    let sum=Number(firstvalue.value) + Number(secondvalue.value);
-    let finalresult=document.getElementsByClassName("finaly");
-    finalresult=sum;
-    console.log(finalresult);
-    // let p = document.createElement("p");
-    //             p.innerHTML = sum;
-    //             document.body.append(p);
-    }
-    function subtraction(){
-    let firstvalue= document.getElementById("firstvalue");
-    let secondvalue= document.getElementById("secondvalue");
-    console.log(firstvalue,secondvalue)
-    let Substraction=Number(firstvalue.value) - Number(secondvalue.value);
-
-    console.log(Substraction);
-}
-function multipulication(){
-    let firstvalue= document.getElementById("firstvalue");
-    let secondvalue= document.getElementById("secondvalue");
-    console.log(firstvalue,secondvalue)
-    let  multipulication=Number(firstvalue.value)* Number(secondvalue.value);
-    console.log( multipulication);
-}
-</script>
-
-<body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title> 
+    </head>
+    <body>
+        <p>First Value</p>
+    <P> 
+        <input type="number" id= "firstValue" value="">
+    </P>
+    <p>Second Value</p>
+    <P> 
+        <input type="number" id= "secondValue" value="">
+    </P>
+    <p> Operations:</p>
+    <input type="button" value="+" onclick="addition()"/>
+    <input type="button" value="-" onclick="subtraction()"/>
+    <input type="button" value="*" onclick="multiplication()"/>
     
-</body>
+    <p>Result</p>
+
+        <script>
+            function addition(){
+                let firstValue = document.getElementById("firstValue");
+                let secondValue = document.getElementById("secondValue");
+                let sum = Number(firstValue.value) + Number(secondValue.value);
+                console.log(sum);
+                let p = document.createElement("p");
+                p.innerHTML = sum;
+                document.body.append(p);
+            }
+            function subtraction(){
+                let firstValue = document.getElementById("firstValue");
+                let secondValue = document.getElementById("secondValue");
+                let substract = Number(firstValue.value) - Number(secondValue.value);
+                console.log(substract);
+                let s = document.createElement("s");
+                s.innerHTML = substract;
+                document.body.append(s);
+            }
+            function multiplication(){
+                let firstValue = document.getElementById("firstValue");
+                let secondValue = document.getElementById("secondValue");
+                let product = Number(firstValue.value) * Number(secondValue.value);
+                console.log(product);
+                let s = document.createElement("s");
+                s.innerHTML = product;
+                document.body.append(s);
+            }
+        </script>
+    </body>
 </html>
