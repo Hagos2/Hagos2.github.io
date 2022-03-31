@@ -1,0 +1,82 @@
+html>
+  <head>
+    <style>
+      tr th{
+
+background-color: rgb(92, 90, 205);
+
+color: snow;
+
+}
+    </style>
+    <style>
+      .buttoncenter{
+        background-color: green;
+        color: white;
+        text-align: center;
+        margin-left: 110px;
+        margin-right: 160px;
+      }
+    </style>
+    <style>
+      table{
+        margin-left: 20px;
+        margin-right: 160px;
+        margin-top: 7px;
+        padding: auto;
+      }
+    </style>
+ 
+  </head>
+  <body>
+    <p>Input Name</p>
+    <p>
+      <input type="text" id="name" value="" />
+    </p>
+    <p>Item Category</p>
+    <p>
+      <input type="text" id="category" value="" />
+    </p>
+    <p>Quantity</p>
+    <p>
+      <input type="text" id="quantity" value="" />
+    </p>
+    <button class="buttoncenter" onclick="addRow()">Add</button><br>
+    <caption type="button">
+
+    </caption>
+    <table border="">
+      <tr id="symbol">
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  
+    <script>
+      function addRow() {
+        let itemName = document.getElementById("name").value;
+        let itemCategory = document.getElementById("category").value;
+        let itemQuantity = document.getElementById("quantity").value;
+
+        let table = document.getElementsByTagName('table')[0];
+
+        let newRow = table.insertRow(table.rows.length);
+
+        let cel1 = newRow.insertCell(0);
+        let cel2 = newRow.insertCell(1);
+        let cel3 = newRow.insertCell(2);
+
+        cel1.innerHTML = itemName;
+        cel2.innerHTML = itemCategory;
+        cel3.innerHTML = itemQuantity;
+    
+      }
+    </script>
+  </body>
+</html>

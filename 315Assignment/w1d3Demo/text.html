@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p>Input</p>
+        <P>
+            <input type="text" id="insert" value="">
+        </P>
+        <p class="dd">Output</p>
+        <p>
+            <textarea class="myClass" id ="output" rows="4" cols="20"></textarea>
+        </p>
+        
+        <br><br>
+        <input class="myClass" id="id" type="button" onclick="submit()" value="Click to add"/>
+        <button onclick="document.getElementById('myInput').value = ''">Click to add</button> 
+
+        <script>
+            function submit(){
+            
+                let inputText = document.getElementById("insert").value;
+                console.log(inputText);
+                 document.getElementById("output").innerHTML=inputText;
+                document.getElementById("insert").value="";
+
+                
+                
+                
+            }
+             
+        </script>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://Hagos2.github.io/315Assignment/styleme.css">(page url)
+    </body>
+</html>
