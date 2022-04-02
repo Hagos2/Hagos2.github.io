@@ -1,157 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-
-
+    <title>Document</title>
 <style>
-  tr:hover {background-color: coral;}
-</style>
-
-
-
-    <style>
-      tr th{
-
-background-color: rgb(92, 90, 205);
-
-color: snow;
-
+.mytable{
+    background-color:cadetblue;
 }
-    </style>
+</style>
 <style>
-  #quantity:hover{
- background-color: black;
-  }
+    tr:hover{
+        background-color: blueviolet;
+    }
 </style>
 
 
+<style>
+    #addd{
+        color:brown;
+    }
+</style>
 
-    <style>
-      .buttoncenter{
-        background-color: green;
-        color: white;
-        text-align: center;
-        margin-left: 110px;
-        margin-right: 160px;
-      }
-    </style>
-    <style>
-      table{
-        margin-left: 20px;
-        margin-right: 160px;
-        margin-top: 7px;
-        padding: 1px;;
-      }
-    </style>
+</head>
  
-  </head>
-  <body>
-      <div id="myinput">
-    <p>Input Name</p>
-    <p>
-      <input type="text" id="name" value="" />
-    </p>
-    <p>Item Category</p>
-    <p>
-      <input type="text" id="category" value="" />
-    </p>
-    <p>Quantity</p>
-    <p>
-      <input type=" text" id="quantity" value="" />
-      <p>Reatings</p>
-      <input type="text" id="reatings" value="" />
-    </p>
-</div>
-<div>
-  <button onclick="filter();">Filter</button><br><br>
-  <button onclick="sort('ratings');">Sort</button><br><br>
-</div>
-<!-- <button onclick="myFunction()">edit</button> -->
+<body>
+    <div>
+    <p><b>Inventory<b></b></p>
+    <label>Item Name:</label><br>
+    <input type="text" id="name"><br><br>
+    <label>Item Category:</label><br>
+    <input type="text" id="category"><br><br>
+    <label>Quantity:</label><br>
+    <input type="text" id="quantity" > <br><br>
+    <label>Rating:</label><br>
+    <input type="text" id="rate"><br><br>
+    
 
-    <button class="buttoncenter" onclick="addRow()">Add</button><br>
-    <caption type="button"> </caption>
-    <table class="mylist" border="" >
-      <tr id="symbol">
-        <th>Product Name</th>
-        <th>Category</th>
-        <th>Quantity</th>
-        <th>Reatings</th>
-       
-      </tr>
-      <tr id="lists">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-       <!-- <td><button id="bn1" value="edit">edit</button></td>
-        <td> <button id="bnt2" value="delete">delete</button></td> -->
-      </tr>
+    <button onclick="add()" id="addd">Add</button>
+    <button  id="save">Save</button>
+    
+   
+    
+    <table border="" class="mytable">
+    <tr >
+        <td> Product Name</td>
+        <td> Category  </td>
+        <td> Quantity</td>
+        <td> Rating</td>
+        <!-- <td> Edit</td>
+        <td> Remove</td> -->
+    </tr>
+    <!-- <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr> -->
+    
     </table>
-  <script>
-     function addRow() {
-     
-        let itemName = document.getElementById("name").value;
-        let itemCategory = document.getElementById("category").value;
-        let itemQuantity = document.getElementById("quantity").value;
-        let itemRatings=document.getElementById("reatings").value;
-        let button1=document.createElement("button");
-        let button2=document.createElement("button")
-        let table = document.getElementsByTagName('table')[0];
-        button1.onclik="edit(td)";
-        button1.innerHTML="edit";
-        button2.innerHTML="remove";
-        button2.onclik="remove() ";
-        let newRow = table.insertRow(table.rows.length);
-        
-        let cel1 = newRow.insertCell(0);
-        let cel2 = newRow.insertCell(1);
-        let cel3 = newRow.insertCell(2);
-        let cel4=newRow.insertCell(3);
-        let cel5=newRow.insertCell(4)
-        let cel6=newRow.insertCell(5)
-        cel1.innerHTML = itemName;
-        cel2.innerHTML = itemCategory;
-        cel3.innerHTML = itemQuantity;
-        cel4.innerHTML=itemRatings;
-        cel5.appendChild(button1);
-        cel6.appendChild(button2);
-        
-      }
-      function filter(item) {
-        addRow().filter((item) => item.quantity > 100);
-}
 
-      function edit(td) {
-  let selectedRow = td.parentElement.parentElement;
-  document.getElementById("name").value = selectedRow.cells[0].innerHTML;
-  document.getElementById("category").value = selectedRow.cells[1].innerHTML;
-  document.getElementById("quantity").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("ratings").value = selectedRow.cells[3].innerHTML;
-}
-function remove(){
-	let table = document.getElementsByClassName("mylist");
-	let rowCount = table.rows.length;
-  let row=table.remove;
-  console.log(row);
-	// if(rowCount > '2'){
-	// 	let row = table.deleteRow(rowCount-1);
-	// 	rowCount--;
-	}
-// 	else{
-// 		alert('There should be atleast one row');
-// 	}
-// }
-function checkNumber(){
-  let itemQuantity = document.getElementById("quantity").value;
-  if(typeof itemQuantity == "String"){
-    itemQuantity. style.backgroundColor = "yellow";
-
-}
-}
-    </script>
-  </body>
+    <select>
+        <option id="filter" >filter</option>
+        <option id="sort" >sort</option>
+    </select>
+</div>
+    
+        <script src="inventory.js"> </script> 
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://Hagos2.github.io/315Assignment/w1d4/Inventorey.html">(validator)</a>
+</body>
 </html>
