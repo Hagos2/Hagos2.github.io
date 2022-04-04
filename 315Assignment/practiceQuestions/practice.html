@@ -43,7 +43,7 @@
     
     <div style="align-items: stretch;">
             <button id="bnt" onclick="copy()">></button>
-            <button id="bnt2"><</button>
+            <button id="bnt2"onclick="transfer()"><</button>
         </div>
         <br>
         <button>Sort</button>
@@ -58,11 +58,17 @@ output.innerText=input.value;
     
 }
 function copy(){
+    let input=document.getElementById("inputPlant");
     let output=document.getElementById("adlist");
-    let destination=document.getElementById("item")
-    destination.innerText=output.value;
+    output.innerText=input.value;
+    let list=document.getElementById("item")
+    list.innerText=output.value;
 }
-
+function transfer(){
+    let output=document.getElementById("adlist");
+    let list=document.getElementById("item")
+    output.innerText=list.value;
+}
 </script>
 </body>
 </html>
