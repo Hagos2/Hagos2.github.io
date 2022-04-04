@@ -78,5 +78,7 @@ let sort= document.getElementById("sort");
 
 filter.addEventListener("click", filt);
 
-
+function filt(){
+    
+}
   

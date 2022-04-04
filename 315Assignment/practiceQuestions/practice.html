@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice3</title>
+    <style>
+
+    </style>
+    <style></style>
+    
+    </style> 
+
+
+
+</head>
+<body style="text-align: center;">
+    <h1>Add Plant</h1>
+    <div>
+        <span> Plant Name :</span>
+        <input id="inputPlant" type="text" name="inputPlant"> 
+        <button id="addBtn" onclick="addlist()">Add</button>
+    </div>
+    <div style="display: flex;justify-content: space-evenly; min-height: 200px;">
+        <div>
+        <p id="adlist" sty>Source</p> 
+            <ul style="border: 2px solid; min-height: 100px;" >
+
+            </ul>
+        </div>
+        
+        
+        <div>
+            <p id="item">destination</p>
+            <ul style="border: 2px solid; min-height: 100px;">
+
+            </ul>
+        </div>
+        
+
+    </div>
+    
+    <div style="align-items: stretch;">
+            <button id="bnt" onclick="copy()">></button>
+            <button id="bnt2"><</button>
+        </div>
+        <br>
+        <button>Sort</button>
+
+<script>
+
+function addlist(){
+    let input=document.getElementById("inputPlant");
+
+    let output=document.getElementById("adlist");
+output.innerText=input.value;
+    
+}
+function copy(){
+    let output=document.getElementById("adlist");
+    let destination=document.getElementById("item")
+    destination.innerText=output.value;
+}
+
+</script>
+</body>
+</html>
