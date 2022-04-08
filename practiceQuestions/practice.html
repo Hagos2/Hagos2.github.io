@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+select+label{
+text-align:left;
+box-sizing: content-box;
+padding-left: 20px;
+
+}
+    </style>
+    <script>
+
+window.onload=function(){
+    let bntn=document.getElementById('bnt');
+    bntn.onclick=Submitdata;
+
+}
+
+        //function 
+function Submitdata(){
+let bnt=document.getElementById('bnt');
+let p=document.createElement('p');
+bnt.onchange=changes;
+ bnt.textContent='done';
+ console.log(bnt);
+ //p.textContent='p';
+}
+
+function changes(){
+let country=documnt.getElementById('country')[0];
+let state=document.getElementsById('lab');
+if( country.option[1].selected)
+state.style.display="none";
+else{
+    state.style.display="";
+}
+}
+    </script>
+</head>
+<body>
+   <h1>Enrollment</h1> 
+<label>Name</label>
+   <input  type="text" value="" placeholder="Enter Name" >
+  <br><br>
+<label id="country">selectCoutry:</label>
+<select id="list" >
+<option id="sle">USA</option>
+<option>Other<option>
+</select>
+<br><br>
+<label id="lab">SelectState:</label>
+<select id="slect">
+<option name="option2">Albama</option>
+<option name="option2">Alaska</option>
+<option name="option2">Californa</option>
+</select>
+<br><br>
+<lable>Zip Code</lable>
+<input  value="" placeholder="Enter Zip">
+<br>
+<button id="bnt" >Submit</button>
+   
+</body>
+</html>
