@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Web Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.myBlog {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.myBlog a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.myBlog a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+.myBlog{
+  background-color: green;
+  color: blue;
+ 
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 66.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column2 {
+  float: right;
+  width: 33.33%;
+  padding: 15px;
+}
+img{
+    float: left;
+}
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row2 h3{
+    border-bottom: 4px solid black;
+}
+#idMore{
+    background-color: lightskyblue;
+}  
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width:600px) { */
+  /* .column {
+    width: 100%;
+  }
+} */
+</style>
+</head>
+<body>
+
+
+
+<div class="myBlog">
+  <a href="/315Assignment/w2d5Css/birhan.html">BidhanTech Blog</a>
+  <a href="/315Assignment/w2d5Css/home.html">HOME</a>
+  <a href="/315Assignment/w2d5Css/recentPosts.html">RECENT POSTS</a>
+  <a href="/315Assignment/w2d5Css/blog.html">BLOG</a>
+  <a href="/315Assignment/w2d5Css/aboutMe.html">ABOUT ME</a>
+  <a href="/315Assignment/w2d5Css/contactMe.html">CONTACT ME</a>
+</div>
+
+<div class="column">
+  <div class="row">
+    <h3>What is Computer Science?</h3>
+    <p>Written by: Historian Date: Thursday, 28 July 2011</p>
+    <p><img src="/315Assignment/imagecs.jpeg" width="100px" height="100px"></a>Computer science is the study of computers, including computational theory, hardware and software design, algorithms and the way humans interact with technology.Computer scientists are problem solvers. When a computer scientist receives a problem, they gather information and communicate with computers using programming languages and logic (e.g. scripting). They create a set of rules or instructions for the computer to execute and solve the problem. Read on to learn more about what computer science is, the importance and benefits of computer science, professional tools and resources, and how to pursue a career in computer science. <a href="https://www.mastersindatascience.org/learning/what-is-computer-science/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+  </div>
+  
+  <div class="row">
+    <h3>Computer Science at Maharishi International University</h3>
+    <p></a>Computer Science is one of the majors in the computer & information sciences program at Maharishi International University.
+        We've pulled together some essential information you should know about the program, including how many students graduate each year, the ethnic diversity of these students, and more. Also, learn how MIU ranks among other schools offering degrees in compsci.  <a href="https://www.collegefactual.com/colleges/maharishi-university-of-management/academic-life/academic-majors/computer-information-sciences/computer-science/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+    </p>
+  </div>
+  
+  <div class="row">
+    <h3>What is JavaScript?</h3>
+    <p>Written by: Mateusz Rojecki Date: October 21, 2020 </p>
+    <p><img src="/315Assignment/What-is-JavaScript-1.png" width="100px" height="100px"></a>     
+    JavaScript (also known as JS) is high-level, prototype-based, untyped, dynamic language. Depending on the environment JavaScript can be interpreted or compiled. It is a multi-paradigm programming language, supporting object-oriented, imperative and functional programming styles.
+        
+    JavaScript started as a browser-only language, adding many possibilities for enhancing websites already written with HTML and CSS. In 2009 everything changed. Now, JavaScript can be used anywhere (literally everywhere, even in spacesuits) because of Node.js – which is JavaScript runtime environment based on Google’s V8 JavaScript Engine. Applications written in JavaScript can be very fast if they are made by skilled developers. Because of very low entry level into JavaScript world, it’s now one of most popular languages in use.<a href="https://devskiller.com/how-to-screen-javascript-developer-skills-find-the-best-guide-for-it-recruitment/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+  </div>
+
+</div>
+<div class="column2">
+    <div class="row2">
+        <h3>Search</h3>
+        <label>Search for:</label>
+        <input type="text" id="searchId" value="search..">
+        <input type="button" value="search" onclick="search(this)">
+    </div>
+    <div class="row2">
+        <h3>Recent Posts</h3>
+        <p>What is Computer Science?</p>
+        <p>Computer Science at Maharishi International University</p>
+        <p>What is JavaScript?</p>
+       
+    </div>
+    <div class="row2">
+        <h3>Pages</h3>
+        <p>About Me</p>
+        <p>Contact Me</p>
+        <p>Cookies & Privacy Policy</p>
+        <p>Terms & Conditions</p>
+    </div>
+    <div class="row2">
+        <h3>Categories</h3>
+        <p>Blog Post</p>
+        <p>Example Post</p>
+        <p>Nature</p>
+    </div>
+    <div class="row2">
+        <h3>Recent Posts</h3>
+        <p>What is Computer Science?</p>
+        <p>Computer Science at Maharishi International University</p>
+        <p>What is JavaScript?</p>
+    </div>
+</div>
+<!-- <script>
+    function search(fieldText){
+        var count=0;
+        let text = document.querySelectorAll("row p").innerText.split(" ");
+        //let str = text.split(" ");
+        let arr=[];
+        arr.push(text);
+        for(let elem of arr){
+        if(elem==fieldText)
+        count++;
+        }
+       let result = count>1?"There are " + count + " " + fieldText : "There is " + count + " " + fieldText;
+       alert(result);
+    }
+    search("fun")
+</script> -->
+</body>
+</html>

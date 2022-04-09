@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            background-color: white;
+            border: 5px rgb(231, 137, 137);    
+        }
+        div{    
+            margin:3px;
+            padding: 5px;
+        }
+        .col1, .col2, .col3{
+            background-color: darkturquoise;
+        }
+        .col1{
+            flex: 0 1 auto;  
+        }
+        .col2{
+            flex: 0 1 auto;             
+        }
+        .col3{
+            flex: 1 0 3;            
+        }
+        .col3>input{ 
+            margin: 2px;
+        }
+        #align{
+            text-align: center;
+            width: 230px;
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <div class="col1">
+                <h2> The Hobbits</h2>
+                <P> The <a href="https://en.wikipedia.org/wiki/Hobbit">Hobbits</a> are an imaginary people in the novels of J. R. R. Tolkien. About half average human height, Tolkien presented hobbits as a variety of humanity, or close relatives thereof. Occasionally known as halflings in Tolkien's writings, they live barefooted, and dwell in homely underground houses which have windows, as they are typically built into the sides of hills. </P>
+            </div>
+            <div class="col2">
+                <h2>The Elves</h2>
+                <p>The <a href="https://en.wikipedia.org/wiki/Elf_(Middle-earth)">Elves</a> in J. R. R. Tolkien's legendarium, Elves are a fictional race inhabiting Middle-earth in the remote past. Unlike Men and Dwarves, Elves are immortal. They appear in The Hobbit and in The Lord of the Rings, but their history is described more fully in The Silmarillion.</p>
+            </div>       
+            <div class="col3">
+                <input type="button" value="Smile" ><input type="button" value="Laugh"><input type="button" value="Wink"><input type="button" value="Shrug">
+                <input type="text" id="align" value="Blush" >
+                <p>
+                In the fantasy of J. R. R. Tolkien, the <a href="https://en.wikipedia.org/wiki/Dwarf_(Middle-earth)">Dwarves</a> are a race inhabiting Middle-earth, the central continent of Arda in an imagined mythological past. They are based on the dwarfs of Germanic myths: small humanoids that dwell in mountains, associated with mining, metallurgy, blacksmithing and jewellery.</p>
+                </div>        
+    </div>
+</body>
+</html>
