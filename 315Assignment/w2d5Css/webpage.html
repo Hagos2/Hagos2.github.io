@@ -48,19 +48,19 @@ body {
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.col {
   float: left;
   width: 66.33%;
   padding: 15px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.para:after {
   content: "";
   display: table;
   clear: both;
 }
-.column2 {
+.col2 {
   float: right;
   width: 33.33%;
   padding: 15px;
@@ -69,12 +69,12 @@ img{
     float: left;
 }
 /* Clear floats after the columns */
-.row2:after {
+.para2:after {
   content: "";
   display: table;
   clear: both;
 }
-.row2 h3{
+.para2 h3{
     border-bottom: 4px solid black;
 }
 #idMore{
@@ -101,21 +101,21 @@ img{
   <a href="/315Assignment/w2d5Css/contactMe.html">CONTACT ME</a>
 </div>
 
-<div class="column">
-  <div class="row">
+<div class="col">
+  <div class="para">
     <h3>What is Computer Science?</h3>
     <p>Written by: Historian Date: Thursday, 25 July 1991</p>
     <p><img src="/315Assignment/imagecs.jpeg" width="100px" height="100px"></a>Computer science is the study of computers, including computational theory, hardware and software design, algorithms and the way humans interact with technology.Computer scientists are problem solvers. When a computer scientist receives a problem, they gather information and communicate with computers using programming languages and logic (e.g. scripting). They create a set of rules or instructions for the computer to execute and solve the problem. Read on to learn more about what computer science is, the importance and benefits of computer science, professional tools and resources, and how to pursue a career in computer science. <a href="https://www.mastersindatascience.org/learning/what-is-computer-science/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
   </div>
   
-  <div class="row">
+  <div class="para">
     <h3>Computer Science at Maharishi International University</h3>
     <p></a>Computer Science is one of the majors in the computer & information sciences program at Maharishi International University.
         We've pulled together some essential information you should know about the program, including how many students graduate each year, the ethnic diversity of these students, and more. Also, learn how MIU ranks among other schools offering degrees in compsci.  <a href="https://www.collegefactual.com/colleges/maharishi-university-of-management/academic-life/academic-majors/computer-information-sciences/computer-science/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
     </p>
   </div>
   
-  <div class="row">
+  <div class="para">
     <h3>What is JavaScript?</h3>
     <p>Written by: Mateusz Rojecki Date: October 11, 2012 </p>
     <p><img src="/315Assignment/What-is-JavaScript-1.png" width="100px" height="100px"></a>     
@@ -125,55 +125,40 @@ img{
   </div>
 
 </div>
-<div class="column2">
-    <div class="row2">
+<div class="col2">
+    <div class="para2">
         <h3>Search</h3>
         <label>Search for:</label>
         <input type="text" id="searchId" value="search..">
         <input type="button" value="search" onclick="search(this)">
     </div>
-    <div class="row2">
+    <div class="para2">
         <h3>Recent Posts</h3>
         <p>What is Computer Science?</p>
         <p>Computer Science at Maharishi International University</p>
         <p>What is JavaScript?</p>
        
     </div>
-    <div class="row2">
+    <div class="para2">
         <h3>Pages</h3>
         <p>About Me</p>
         <p>Contact Me</p>
         <p>Cookies & Privacy Policy</p>
         <p>Terms & Conditions</p>
     </div>
-    <div class="row2">
+    <div class="para2">
         <h3>Categories</h3>
         <p>Blog Post</p>
         <p>Example Post</p>
         <p>Nature</p>
     </div>
-    <div class="row2">
+    <div class="para2">
         <h3>Recent Posts</h3>
         <p>What is Computer Science?</p>
         <p>Computer Science at Maharishi International University</p>
         <p>What is JavaScript?</p>
     </div>
 </div>
-<script>
-    function search(fieldText){
-        var count=0;
-        let text = document.querySelectorAll("row p").innerText;
-        let str = text.split(" ");
-        let arr=[];
-        arr.push(str);
-        for(let elem of arr){
-        if(elem==fieldText)
-        count++;
-        }
-       let result = count>1?"There are " + count + " " + fieldText : "There is " + count + " " + fieldText;
-       alert(result);
-    }
-    search("fun")
-</script>
+
 </body>
 </html>

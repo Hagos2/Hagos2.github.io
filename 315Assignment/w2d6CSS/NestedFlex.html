@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* box-sizing: border-box; */
+            box-sizing: content-box;
+        }
+        .container{
+            display: flex;
+            background-color: white;
+            border: 5px rgb(231, 137, 137);  
+            box-sizing: content-box;  
+        }
+       div{   
+            /* flex: 1 100px; 
+            display:flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around; */
+            margin:3px;
+            padding: 5px;
+        }
+        .col1, .col2, .col3{
+            background-color: darkturquoise;
+        }
+        .col1{
+            flex: 0 1 auto;  
+        }
+        .col2{
+            flex: 0  1 auto;             
+        }
+        .col3{
+            flex: 1 0 3;            
+        }
+        .col3>input{ 
+            margin: 2px;
+            justify-content:space-around;
+            flex-wrap: wrap;
+        }
+        #align{
+            text-align: center;
+            width: 230px;
+            justify-content:space-around;
+            flex-wrap: wrap;
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <div class="col1">
+                <h2> The human evolution</h2>
+                <P> The <a href="https://geneticliteracyproject.org/2019/03/07/why-human-evolution-is-far-from-over-and-may-be-speeding-up/?gclid=EAIaIQobChMI7fGO-pKL9wIV7f3jBx09-AweEAAYASAAEgJfYPD_BwE"> humanevolution</a>Evolution is a gradual change to the DNA of a species over many generations. It can occur by natural selection, when certain traits created by genetic mutations help an organism survive or reproduce. Such mutations are thus more likely to be passed on to the next generation, so they increase in frequency in a population.</P>
+            </div>
+            <div class="col2">
+                <h2> The Man evolution</h2>
+                <p>The Evolutionary theory (not fact I might add) believes that eons ago life began in a water pool. Over millions of years an ‘algae’ or ‘primordial protozoon’ slowly developed limbs via a series of transformational events i.e., the algae grew an eye, then a leg, then became a fish, which then became a mammal etc. </p>
+            </div>       
+            <div class="col3">
+                <input type="button" value="Smile" ><input type="button" value="Laugh"><input type="button" value="Wink"><input type="button" value="Shrug">
+                <input type="text" id="align" value="Blush" >
+                <p>
+                In the fantasy of J. R. R. Tolkien, the <a href="https://en.wikipedia.org/wiki/Dwarf_(Middle-earth)">Dwarves</a> are a race inhabiting Middle-earth, the central continent of Arda in an imagined mythological past. They are based on the dwarfs of Germanic myths: small humanoids that dwell in mountains, associated with mining, metallurgy, blacksmithing and jewellery.</p>
+                <p>From their creation, the Dwarves spoke Khuzdul, one of Tolkien's invented languages, in the fiction made for them by Aulë, rather than being descended from Elvish, as most of the languages of Men were. They wrote it using Cirth runes, also invented by Tolkien.[6] The Dwarves kept their language secret and did not normally teach it to others.</p>
+                </div>
+
+    </div>
+    <a href="/315Assignment/w2d6CSS/NavBar.html">NavBar1</a>
+    <br> <br>
+    <a href="/315Assignment/w2d6CSS/NavBar2.html">NavBar2</a>
+    <br> <br>
+    <a href="/315Assignment/w2d6CSS/NavBar3.html">NavBar3</a>
+    <br> <br>
+    <a href="/315Assignment/w2d6CSS/imageLayout.html">photoLayOut</a>
+</body>
+</html>

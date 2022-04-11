@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:  grey;
+}
+li,a,button{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+}
+.logo{
+    cursor: pointer;
+}
+.con{
+    list-style: none;
+}
+.con li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.con li a{
+    transition: all 0.3s ease 05;
+}
+.con li a:hover{
+   color: #088;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 05;
+}
+
+button:hover{
+background-color: 000;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <label class="logo">LOGOBAKERY</label>
+        <nav>
+          <ul class="con">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="#"><button>Contact</button></a>
+      </header>
+</body>
+</html>
