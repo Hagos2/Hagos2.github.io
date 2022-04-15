@@ -15,8 +15,10 @@
     <button onclick="edit()">Edit</button>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.getElementByName('fName');
-        console.log(urlParams.getElementByName('lName'));
+        const myParam = urlParams.getElementByName("fName");
+        console.log(myParam );
+        const Myparam=urlParams.getElementByName("lName");
+        console.log(Myparam);
         let first = document.getElementsByTagName("label")[0];
         let last = document.getElementsByTagName("label")[1];
         fisrtLast.innerHTML= urlParams.getElementById('fName')+" "+ urlParams.getElementById('lName');

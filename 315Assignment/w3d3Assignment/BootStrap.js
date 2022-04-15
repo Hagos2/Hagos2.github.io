@@ -4,7 +4,7 @@ const myCon = document.getElementById("myCon");
 myCon.addEventListener("register", (event)=>{
   event.preventDefault();
   const request=new XMLHttpRequest();
-  request.open("post", "bootStrapForm.html");
+  request.open("post", "BootStrap.html");
 });
 
 function register() {
