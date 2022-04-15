@@ -48,8 +48,35 @@ function ListNode(value,next){
     this.value = value;
 }
 
-let maggieNode = new ListNode("Maggie",null);
-let lisaNode = new ListNode("Lisa",maggieNode);
-let bartNode = new ListNode("Bart",lisaNode);
-let homerNode = new ListNode("Homer",bartNode);
-let abeNode =  new ListNode("Abe",homerNode); 
+// let maggieNode = new ListNode("Maggie",null);
+// let lisaNode = new ListNode("Lisa",maggieNode);
+// let bartNode = new ListNode("Bart",lisaNode);
+// let homerNode = new ListNode("Homer",bartNode);
+// let abeNode =  new ListNode("Abe",homerNode); 
+
+function generateList(root){
+    if(root.descendents==null || root.descendents.length==0)
+        return new ListNode(root.value);
+    let linkedList = new ListNode(root.value);
+    let list=linkedList;
+    for(let eachChild of root.descendents){
+        
+        list.next = generateList(eachChild);
+        list = list.next;
+       
+    }
+    return linkedList;
+}
+
+console.log(JSON.stringify(generateList(abe)))
+
+
+function traverse(list){
+  if(list==null )
+    return;
+
+  console.log("here ",list.value);
+  list = list.next;
+  return traverse(list);
+  
+}
