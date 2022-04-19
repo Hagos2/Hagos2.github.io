@@ -26,6 +26,8 @@ function contains(tree,name){
 }
 
 console.log( contains(abe,"Lisa"));
+
+
 function getMatchingTree(tree,name){
     if(tree.value===name){
         return tree;
@@ -40,19 +42,19 @@ function getMatchingTree(tree,name){
     }
     return null;
 }
-console.log("getMatchingTree ",getMatchingTree(abe,"Lisa"));
-// Create a new constructor function ListNode (based on TreeNode below) and use it to generate a 
-// linked list of Abe, Homer, Bart, Lisa, Maggie instead of a tree.
+console.log("getMatchingTree ",getMatchingTree(abe,"Homer"));
+// // Create a new constructor function ListNode (based on TreeNode below) and use it to generate a 
+// // linked list of Abe, Homer, Bart, Lisa, Maggie instead of a tree.
 
 function ListNode(value,next){
     this.value = value;
 }
 
-// let maggieNode = new ListNode("Maggie",null);
-// let lisaNode = new ListNode("Lisa",maggieNode);
-// let bartNode = new ListNode("Bart",lisaNode);
-// let homerNode = new ListNode("Homer",bartNode);
-// let abeNode =  new ListNode("Abe",homerNode); 
+let maggieNode = new ListNode("Maggie",null);
+let lisaNode = new ListNode("Lisa",maggieNode);
+let bartNode = new ListNode("Bart",lisaNode);
+let homerNode = new ListNode("Homer",bartNode);
+let abeNode =  new ListNode("Abe",homerNode); 
 
 function generateList(root){
     if(root.descendents==null || root.descendents.length==0)
@@ -67,8 +69,8 @@ function generateList(root){
     }
     return linkedList;
 }
-
-console.log(JSON.stringify(generateList(abe)))
+let linkedList=generateList('abe');
+ console.log(JSON.stringify(linkedList));
 
 
 function traverse(list){
@@ -80,3 +82,30 @@ function traverse(list){
   return traverse(list);
   
 }
+
+//6
+function treeModifier(root,modifierFunc){
+    root.value=modifierFunc(root.value);
+    for(let child of root.descendents){
+        treeModifier(child,modifierFunc)
+    }
+}
+//allcaps
+treeModifier(abe,(treeNode)=>treeNode.toUpperCase());
+console.log(abe);
+//reverse
+treeModifier(abe,(node)=>node.split("").reverse().join(""));
+console.log(abe);
+//addStar
+treeModifier(abe,(node)=>"***"+node+"***");
+
+console.log(abe);
+//7
+function treeCollector(tree){
+    let names=[tree.value];
+    for(let child of tree.descendents){
+        names=names.concat(treeCollector(child));
+    }
+    return names;
+}
+console.log(treeCollector(abe));
