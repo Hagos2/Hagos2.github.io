@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    body{
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+    }
+    .wrapper{
+        margin: auto;
+        background-color: #131921;
+        width: 100%;
+        padding: 50px 50px 0px 50px;
+    }
+    .wrapper-content{
+        display: grid;
+        grid-gap: 20px;
+        grid-row-gap: 50px;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-areas: "aboutus tweet instagram";
+        width: 100%;
+        margin: auto;
+
+    }
+    .aboutus{
+        grid-area:aboutus ;
+
+    }
+   
+    .aboutus p{
+        color: #87868B;
+        font-size: 12px;
+        margin: 20px 0px;
+        font-weight: 400;
+    }
+    .tweet{
+        grid-area: tweet;
+    }
+    .tweet li{
+        color: #87868B;
+        font-size: 12px;
+    }
+    .instagram{
+        grid-area: instagram;
+    }
+    .nav-bar{
+        width: 89%;
+    margin: auto;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        border-top: 1px solid rgb(49, 47, 47);
+       width: 100%;
+    }
+    .nav-bar li{
+        margin-left: 3%;
+        display: inline-block;
+    }
+    .nav-bar ul{
+        margin-left: -55px;
+        
+    }
+    .nav-bar div:first-child{
+        padding: 10px;
+        width: 70%;
+    }
+    .nav-bar div:last-child{
+        padding: 30px;
+    }
+    .nav-bar li a{
+        color: white;
+        text-decoration: none;
+    }
+    .nav-bar li a:hover{
+        color: #E9853E;
+    
+    }
+
+    .box{
+            color: #fff;
+            padding: 20px;       
+    }
+    .tweet ul{
+        list-style-image: url("images/twitter-16.ico");
+        
+    }
+    .aboutus li:last-child{
+      list-style-image: url("images/email-11-16.ico");  
+    }
+    .aboutus li:first-child{
+      list-style-image: url("images/phone-2-16.ico");  
+    }
+    .aboutus ul{
+        font-size: 13px;
+        padding-left: 25px;
+        
+    }
+    .aboutus li{
+        margin-bottom: 2px;
+        
+    }
+
+    .input{
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+        border-radius: 20px;
+        background-color: #2A2B30;
+        width: 80%;
+    }
+
+    .input input{
+        border: 0;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: #2A2B30;
+    }
+    .input button{
+        border: 0;
+        padding: 10px 30px;
+        border-radius: 30px;
+        background-color: #E9853E;
+        color:white;
+    }
+    .tweet li{
+        margin-bottom: 15px;
+    }
+
+    .photo-wrapper {
+        margin-top: 20px;
+            display:grid;
+            grid-gap: 20px;
+            grid-row-gap: 18px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "one two"
+            "three four";
+           
+        }
+        .one{
+            grid-area: one;
+        }
+        .two{
+            grid-area: two;
+        }
+        .three{
+            grid-area: three;
+        }
+        .four{
+            grid-area: four;
+        }
+
+        .photo-wrapper div {
+            max-width: 156px;
+            max-height: 100px;
+            flex-grow: 1;
+        }
+
+        .photo-wrapper img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+        
+        label{
+            font-size: 1.3em;
+            font-weight: bolder;
+        }
+
+</style>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="box aboutus">
+                <label>About us</label>
+                <p>
+                    Lorem ipsum dolor sit amet. Ut corrupti enim qui odio dolorem eos sequi inventore ab quam nesciunt sed dolores internos ad deserunt velit et omnis vitae. Cum inventore 
+                </p>
+                <ul>
+                    <li >+1 435 456 3241</li>
+                    <li>info@gmail.com</li>
+                </ul>
+                <div class="input">
+                    <div><input type="text" placeholder="Enter your e-mail"></div><div><button>send</button></div>
+                </div>
+
+            </div>
+            <div class="box tweet">
+                <label>Latest Tweet</label>
+                <ul>
+                    <li>Sit iure sint sed nihil Quis est ratione voluptatem. Tenetur adipisci qui delectus voluptas ab esse fuga et perspiciatis repudiandae.</li>
+                    <li>Sit iure sint sed nihil Quis est ratione voluptatem. Tenetur adipisci qui delectus voluptas ab esse fuga et perspiciatis repudiandae.</li>
+                    <li>Sit iure sint sed nihil Quis est ratione voluptatem. Tenetur adipisci qui delectus voluptas ab esse fuga et perspiciatis repudiandae.</li>
+                </ul>
+            </div>
+            <div class="box instagram">
+                <label>Instagram</label>
+                <div class="photo photo-wrapper">
+                    <div class="one"><img src="images/1.png"></div>
+                    <div class="two"><img src="images/2.png"></div>
+                    <div class="three"><img src="images/3.png"></div>
+                    <div class="four"><img src="images/9.png"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+   <div class="nav-bar">
+       <div>
+           <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Our work</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Contact</a></li>
+           </ul>
+       </div>
+       <div ><img src="images/logo.png" style="padding-right: 40px;"></div>
+   </div>
+</div>
+
+</body>
+</html>

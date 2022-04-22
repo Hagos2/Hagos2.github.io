@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+      
+       html,
+        body {
+            /* height: 100%; */
+            margin: 0;
+        } 
+
+        form {
+            border: 1px ridge lightgray;
+            padding: 20px;
+        }
+
+        .mainContainer {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+    </style>
+    <script>
+         (function () {
+            'use strict'
+            window.addEventListener('load', function () {
+                var forms = document.querySelectorAll('.needs-validation')
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+
+                        }, false)
+                    })
+            }, false);
+        })()
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+        function createAccount() {
+            window.location.href = "signup.html";
+        }
+        let people = [
+            { name: "Taye Lemma", email: "manager@gmail.com", password: "manager", role: "Manager" },
+            { name: "Patric B", email: "user@gmail.com", password: "user", role: "user" },
+          
+        ];
+
+        localStorage.setItem("cart",JSON.stringify(shoppingCart));
+
+        function submitForm() {            
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+            let person = people.filter(function (item, index) {
+                return email == item.email && pass == item.password;
+            });
+            
+            if (person.length == 0) {
+                window.location.href = "";
+            }
+            else if (person[0].role == 'Manager') {
+                window.location.href = "inventory.html";
+            }
+            else {
+                window.location.href = "product.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mainContainer">
+
+        <div class="position-sticky top-0" id="header"></div>
+        <div class="formContainer" style="width: 400px; margin: auto;">
+           <img src="/image/logoAmazon.PNG" width="150px"  style="margin-left:120px;" alt="">
+            <form  action="" class="needs-validation" novalidate>
+             <h1>Sign In</h1>
+             <br>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="text" id="email" placeholder="Email" required>
+                    <div class="invalid-feedback">
+                        Please enter your username.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="password" id="password"
+                        placeholder="Enter your password" required>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                </div>
+              
+                <div class="d-grid gap-2 mb-3">
+                    <input class="btn btn-warning btn-lg" type="button" value="Sign-In" onclick="submitForm()">
+                </div>
+
+
+                 <div class="d-grid gap-2 mb-3">
+                    <input class="btn btn-secondary btn-lg" type="button" value="Create new account" name="sign" id="sign_up" onclick="createAccount()">
+                      
+                </div>
+               
+
+                
+                <p>By creating an account you agree to Amazon's <a
+                        href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_register_notification_condition_of_use?id=508088"
+                        style="color:dodgerblue">Conditions of Use</a>
+                    and <a
+                        href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_signin_notification_privacy_notice?id=468496"
+                        style="color: dodgerblue;">Privacy Notice</a>.</p>
+
+            </form>
+        </div><br>
+        <div id="footer"></div>
+    </div>
+
+</body>
+
+</html>

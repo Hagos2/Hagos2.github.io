@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+    $(function(){
+       $('#header').load("header.html");
+       $('#footer').load("footer.html");
+   });
+   function myClick() {
+    let idOf = document.getElementById("textId");
+    alert( "here "+ idOf.value);
+   }
+   
+    </script>
+    <style>
+        body{
+            background-color: #EAEDED !important;
+        }
+        .carousel-control-next, .carousel-control-prev {
+            top: -300px !important;
+        }
+        .container{
+        max-width: 1512px !important;
+        }
+
+        .cardGrid{
+           position: relative;
+            display: grid;
+            bottom: 293px;
+            height: 600px;
+            z-index: 1;
+            
+            
+        }
+        .cardGrid > div{
+            margin: 20px;
+            background-color: white;
+            height: 400px;
+            padding: 10px;
+            
+        }
+        .cardGrid  h5, .trending h5{
+            color: black;
+            font-weight: bold;
+            
+        }
+        .cardGrid  label{
+            color: #36B19D;
+            font-size: 13px;
+            
+        }
+        .cardGrid  label a{
+            margin-top: 10px;
+            color: blue;
+            font-weight: lighter;
+            text-decoration: none;
+            
+        }
+        .cardGrid  span{
+            color: #1c2020;
+            font-size: 11px;
+            
+        }
+        .cardGrid img{
+        max-width: none;
+        border: 0;   
+        }
+        .card1{
+            grid-column:1/3 ;
+            grid-row:1/3 ;
+            
+        }
+        .card2{
+            grid-column:3/5 ;
+            grid-row:1/3 ;
+        }
+        .card3{
+            grid-column:5/7 ;
+            grid-row:1/3 ;
+        }
+        .card4{
+            grid-column:1/3 ;
+            grid-row:3/5 ;
+        }
+        .card5{
+            grid-column:3/5 ;
+            grid-row:3/5 ;
+        }
+        .card6{
+            grid-column:5/7 ;
+            grid-row:3/5 ;
+        }
+        
+        .trending{
+            height: 350px;
+            background-color: white;
+            width: 100%;
+        }
+
+        .carousel{
+            z-index: 1 !important;
+            overflow: hidden;
+        }
+        .smallSquare{
+            display: grid;
+            gap: 10px;
+           
+        }
+        .square1{
+            grid-column:1/2;
+            grid-row: 1/2;
+            width: 47.5%;
+            height: 100%;
+            
+        }
+        .square2{
+            grid-column:2/3;
+            grid-row:1/2 ;
+            width: 47.5%;
+            height: 139px;
+            padding: 0 0 36px;
+        }
+        .square3{
+            grid-column:1/2;
+            grid-row: 2/3;
+            width: 47.5%;
+            height: 100%;
+            padding: 0 0 36px;
+        }
+        .square4{
+            grid-column:2/3;
+            grid-row:2/3;
+            width: 47.5%;
+            height: 100%;
+            padding: 0 0 36px;
+        }
+        .square10{
+            padding-left: 32px;
+        }
+        .card6  label, .card4  label{
+            padding: 30px !important;
+        }
+        .prods p{
+            color: black;
+            font-size: 12px;
+        }
+        .prods{
+            width: 200px;
+            height: 200px;
+        }
+        .prods span{
+            color: black;
+            font-weight: bold;
+        }
+        .prods div{
+            padding:0 0 20px;
+            height: 135px;
+        }
+
+        .carousel-item img {
+      -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+<div class="container">
+    <!-- ======================= carosel ======================================== -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/carosel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/carosel2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/carosel3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+<!-- ======================= carosel end ======================================== -->
+
+<!-- ======================= cards end ======================================== -->
+<div class="cardGrid">
+    <div class="card1">
+    
+            <h5>Deals in clothing & more</h5>
+        <div class="smallSquare"> 
+            <div class="square1">
+                <img src="images/Outlet_GW_DR_186x116_Mar_2022._SY116_CB627369135_.jpg">
+                <span>dresses</span>
+            </div>
+            <div class="square2">
+                <img src="images/Outlet_GW_SD_186x116_Mar_2022._SY116_CB627369135_.jpg">
+                <span>Sandals</span> 
+            </div>
+            <div class="square3">
+                <img src="images/Outlet_GW_SS_186x116_Mar_2022._SY116_CB627369135_ (1).jpg">
+                <span>Swimmingsuits</span> 
+            </div>
+            <div class="square4">
+                <img src="images/Outlet_GW_BG_186x116_Mar_2022._SY116_CB627369135_ (1).jpg">
+                <span>bags</span> 
+            </div>
+        </div>
+        <label><a href="#">shoop outlet</a></label>
+        
+    </div>
+    <div class="card2">
+        <h5>For all moms</h5>
+        <div class="smallSquare"> 
+            <div class="square1">
+                <img src="images/Mom_Homebody_GW_QuadImageCard_Desktop_186x116._SY116_CB625927475_.jpg">
+                <span> Homebody mom</span>
+            </div>
+            <div class="square2">
+                <img src="images/Mom_Travel_GW_QuadImageCard_Desktop_186x116._SY116_CB625927475_.jpg">
+                <span>Travel mom</span> 
+            </div>
+            <div class="square3">
+                <img src="images/Mom_Plant_GW_QuadImageCard_Desktop_186x116._SY116_CB625927475_.jpg">
+                <span>Plant mom</span>
+            </div>
+            <div class="square4">
+                <img src="images/Mom_Travel_GW_QuadImageCard_Desktop_186x116._SY116_CB625927475_.jpg">
+                <span>pet mom</span> 
+            </div>
+
+
+
+
+        </div>
+        <label><a href="#">Shop women's fashion</a></label>
+    </div>
+
+
+    <div class="card3">
+        <h5>Must-see Deals </h5>
+        <div class="smallSquare"> 
+            
+            <div class="square1">
+                <img src="images/DQC_MAR_AF_W_MSD_ACCESSORIES_1x._SY116_CB628401165_ (1).jpg">
+                <span>All deals</span>  
+            </div>
+            <div class="square2">
+                <img src="images/DQC_MAR_AF_W_MSD_CLOTHING_1x._SY116_CB628401165_.jpg">
+                <span>Clothing</span> 
+            </div>
+            <div class="square3">
+                <img src="images/DQC_MAR_AF_W_MSD_HANDBAGS_1x._SY116_CB628401165_.jpg">
+                <span>Handbags</span> 
+            </div>
+            <div class="square4">
+                <img src="images/DQC_MAR_AF_W_MSD_SHOES_1x._SY116_CB628401165_ (1).jpg">
+                <span>Shoes</span>  
+            </div>
+        </div>
+        <label><a href="#">Discover everything, all for Mom</a></label>
+    </div>
+
+
+    <div class="card4">  
+        <h5>Cool kicks at Shopbop</h5>
+        <div class="smallSquare"> 
+            <div class="square10">
+                <img src="images/mp_20210910_sneakers_desktopsinglecategory_desktop_379x304._SY304_CB642596507_.jpg">
+                 
+            </div>
+            
+        </div>
+        <label><a href="#">See the full edit from Shopbop</a></label></div>
+
+    <div class="card5">
+        <h5>Elevated looks by style</h5>
+        <div class="smallSquare"> 
+            <div class="square1">
+                <img src="images/NTk4NjkzMjUt-MzAzNzQwYzUt-w186._SY116_CB625647221_.jpg">
+                <span>Romantic</span>
+            </div>
+            <div class="square2">
+                <img src="images/NTk4NjkzMjUt-ODkwMzY1NDAt-w186._SY116_CB625647221_.jpg">
+                <span>Boho</span>
+            </div>
+            <div class="square3">
+                <img src="images/NTk4NjkzMjUt-ZGFjODMyMzEt-w186._SY116_CB625647221_.jpg">
+                <span>Glan</span> 
+            </div>
+            <div class="square4">
+                <img src="images/NTk4NjkzMjUt-YmRjMjVlMWUt-w186._SY116_CB625647221_.jpg">
+                <span>Edgy</span> 
+            </div>
+        </div>
+        <label><a href="#">Shop all Premium Brands</a></label>
+    </div>
+    <div class="card6">
+
+        <h5>Invest in yourself</h5>
+        <div class="smallSquare"> 
+            <div class="square10">
+                <img src="images/Lifestyle1_1x._SY304_CB638453154_.jpg">
+                
+            </div>
+            
+        </div>
+        <label><a href="#">Discover free Aws courses</a></label>
+    </div>
+    
+</div>
+
+<!-- ======================= cards end ======================================== -->
+
+<div class="trending p-3">
+    <h5>Amazon Live | Shop livestreams</h5>
+    <div class="videoprop d-flex" style=" --bs-gap: 5rem;">
+        
+            <div class="p-3 flex-shrink-1 ">
+                <iframe width="400px" height="230px" src="https://www.youtube.com/embed/9tDyVLEQyg8" volume=0 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+        
+        <div class="prods p-3  flex-shrink-0">
+            <div><img src="images/41Zeaq5Ri-L._SX160_QL100_AC_SCLZZZZZZZ_.jpg" class=" mx-auto "></div>
+            <p>Creative Co-Op Mango Wood, Walnut Finish Bowl, Brown</p>
+            <span>$27.52</span>
+
+        </div>
+        <div class="prods p-3 flex-shrink-0">
+            <div> <img src="images/41WoW19RhqL._SX160_QL100_AC_SCLZZZZZZZ_.jpg" class=" mx-auto "></div>
+            <p>Creative Co-Op Mango Wood, Walnut Finish Bowl, Brown</p>
+            <span>$42.52</span>
+        </div>
+        <div class="prods p-3 flex-shrink-0">
+            <div> <img src="images/41fEXPfjBkL._SX160_QL100_AC_SCLZZZZZZZ_.jpg" class=" mx-auto "></div>
+            <p>Creative Co-Op Mango Wood, Walnut Finish Bowl, Brown</p>
+            <span>$27.52</span>
+        </div>
+        <div class="prods p-3 flex-shrink-0">
+           <div><img src="images/510RrtlaMkL._SX160_QL100_AC_SCLZZZZZZZ_.jpg" class=" mx-auto "></div> 
+            <p>Creative Co-Op Mango Wood, Walnut Finish Bowl, Brown</p>
+            <span>$27.52</span> 
+        </div>
+        <div class="prods p-3 flex-shrink-0">
+           <div> <img src="images/21b-jyg49SL._SX160_QL100_AC_SCLZZZZZZZ_.jpg" class=" mx-auto "></div>
+            <p>Creative Co-Op Mango Wood, Walnut Finish Bowl, Brown</p>
+            <span>$27.52</span>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+   
+    <div id="footer"></div>
+</body>
+
+</html>
