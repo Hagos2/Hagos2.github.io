@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="image1"><img src="/CS445-Labs/images/dog.png.webp"  width="90px" height="60px" alt="image" ></div>
+    <br>
+    <div id="image2"><img src="/CS445-Labs/images/mb-03785790.jpg"  width="90px" height="60px" alt="image" ></div>
+    <button type="button" id="swap">Swap</button>
+    <script>
+        document.getElementById('swap').onclick= function(){
+            let temp = document.getElementById('image1').innerHTML;
+
+            document.getElementById('image1').innerHTML = document.getElementById('image2').innerHTML;
+
+            document.getElementById('image2').innerHTML = temp;
+            
+        }
+    </script>
+</body>
+</html>

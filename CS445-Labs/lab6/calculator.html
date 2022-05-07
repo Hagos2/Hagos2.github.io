@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .container{
+     
+            background-color: dimgrey;
+            border: 5px solid grey;
+            margin: 10px;
+            padding: 10px 0px 10px 50px;
+            margin-right: 10px;
+            height: 550px;
+            width: 800px;
+        }
+
+    .container{
+        display:grid;
+        justify-content:space-around;
+    }
+    #myCalc{
+            font-style:normal;
+            font-size: 30px;
+            color: blue;
+            offset-position: 50px;
+            padding-bottom: 30px;
+        }
+
+   .btn {
+       justify-content: space-around;
+   }
+   #sub:hover, #res:hover, #input1:hover, #input2:hover,#input3:hover{
+            background-color: greenyellow;
+        }
+   #sub,#res{
+            color: cornflowerblue;
+            padding: 5px 33px 5px 33px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label id="myCalc"><strong>My Simple Addition Calculator</strong></label>
+        <div class="step1">
+     <label>Number1:</label>
+     <input type="number" id="input1" width="60px">
+    </div>
+    <div class="step2">
+     <label>Number2:</label>
+     <input type="number" id="input2">
+    </div>
+    <div class="step3">
+     <label>sum:</label>
+     <input type="" id="input3">
+    </div>
+    
+<div class="btn">
+    <button class type="submit" id="sub" value="submit">
+        <b>Submit</b>
+      </button>
+      <button class type="reset" id="res">
+        <b>Reset</b>
+      </button>  
+</div>
+</div>
+<script>
+    document.getElementById('sub').onclick = function(){
+      let num1 = document.getElementById("input1").value;
+      let num2 = document.getElementById("input2").value;
+      let sum = Number(num1) + Number(num2);
+     document.getElementById("input3").value=sum;
+      
+    }
+    document.getElementById('res').onclick = function(){
+       document.getElementById("input1").value="";          
+      document.getElementById("input2").value="";
+     document.getElementById("input3").value="";
+    }        
+  </script>
+
+</body>
+</html>
