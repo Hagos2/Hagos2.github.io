@@ -1,0 +1,41 @@
+body{
+    background-color: antiquewhite;
+}
+h1{
+    background-attachment: #ddd;
+    padding: 5px;
+    margin:5px 0px 5px 10px;
+    border: 1px solid #ddd;
+    width: fit-content;
+}
+#employees{
+    display:grid;
+    /* flex-wrap: wrap; */
+    gap: 5px;
+    
+}
+img{
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px;
+  width: 263px;
+  height: 260px;
+  margin-left: 10px;
+}
+p{
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 263px;
+    padding: 5px;
+    margin-left: 60px;
+    
+}
+#refresh:hover, p:hover, h1:hover{
+    background-color: lightskyblue;
+}
+#refresh{
+    padding: 10px;
+    font-size: x-large;
+    background-color:rgb(11, 182, 130);
+    margin-left: 10px;
+}
