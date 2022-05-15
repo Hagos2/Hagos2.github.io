@@ -26,7 +26,7 @@ function add(){
 
     tr.innerHTML=" <td> " + prodname.value + "</td> <td> "+ category.value + "</td> <td> "+
       qty.value + "</td> <td> "+  rate.value + "</td> <td> <button  "+"onclick= "+"edit(this)"+
-      " "+"   >"+"Edit"+"</button></td> <td><button  "+"onclick= "+"remove(this)"+" "+"    >"+"Remove"+"</button></td>"
+      " "+"   >"+"Edit"+"</button></td> <td><button  "+"onclick= "+"remove(this)"+" "+"    >"+"x"+"</button></td>"
 
    
 let obj={name:prodname.value, category:category.value, qty:qty.value,rate:rate.value }

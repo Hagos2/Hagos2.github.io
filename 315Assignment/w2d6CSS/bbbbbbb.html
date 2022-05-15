@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+}
+.user{
+     display: flex; 
+    box-sizing: border-box;
+    /* justify-content:space-around;  */
+    background-color:darkgray;
+}
+        .inpu {
+            display: flex; 
+            justify-content: flex-end; 
+            margin-top: 20px;
+            
+            box-sizing: border-box;
+             justify-content:space-around; 
+            width: 100%;
+            height: 60%;
+            /* width: max-content 60px; */
+            margin-left: 1000px;
+            margin-bottom: 20px;
+        }
+        .wel {
+            
+            height: 20%;
+            margin: 10%;
+          font-size: 40px;
+          color: aqua;
+        }
+        .lab input{
+            margin-top: 40px;
+           
+         } 
+         .img{
+             justify-content: flex-start;
+             display: flex;
+         }
+         #text{
+             border: 2px solid bisque;
+             height: 20px;
+             color:blanchedalmond;
+             background-color:burlywood;
+         }
+    </style>
+</head>
+<body>
+    <div class="user" >
+  <!-- <div class="img"> <img src="/CS445MapFinalProject/images/apple-music-logo-circle-png-28.png" width="40px" height="40px">  -->
+   <label id="text" width="60px" height="10px"  style="background-color:darkgray">MusicPlayer</label>
+</div>
+   <div class="inpu"> 
+       <input type="text" value="" placeholder="userName">
+    <input type="text" value="" placeholder="password">
+    <button type="button" >login</button>
+</div>
+</div>
+<div  class="wel">
+    <label > welcome to music website</label>
+</div>
+
+</body>
+</html>

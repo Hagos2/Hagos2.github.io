@@ -1,0 +1,45 @@
+.container {
+    margin-top: 10px;
+    display: flex;
+    
+}
+body{
+    background-color: black;
+}
+
+#header {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+}
+img{
+    justify-content: flex-start;
+    margin-right: 500px;
+}
+#header #right {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+}
+#header #left{
+   display: flex; 
+   justify-content: flex-start;
+}
+#header #search {
+    display: none;
+}
+
+#header #logout-div {
+    display: none;
+}
+
+#errormessage {
+    color: red;
+}
+#content{
+    display:grid;
+    justify-content: center;
+    color: aqua;
+    
+}

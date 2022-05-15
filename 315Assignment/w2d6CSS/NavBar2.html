@@ -31,9 +31,11 @@ header{
 .con{
     list-style: none;
 }
-.con li{
+.con input{
     display: inline-block;
     padding: 0px 20px;
+    font-style: normal;
+    text-decoration-color: white;
 }
 
 .con li a{
@@ -49,8 +51,8 @@ button{
     background-color: rgba(0,136,169, 1);
     border: none;
     border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 05;
+    /* cursor: pointer;
+    transition: all 0.3s ease 05; */
 }
 
 button:hover{
@@ -64,13 +66,13 @@ background-color: 000;
     <header>
         <label class="logo">LOGOBAKERY</label>
         <nav>
-          <ul class="con">
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
+          <div class="con">
+            <input type="text" placeholder="username" > 
+            <input type="text" placeholder="password" >
+            <!-- <li><button>login</button></li> -->
+          </div>
         </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
+        <button id="btn" type="button">login</button></a>
       </header>
 </body>
 </html>
