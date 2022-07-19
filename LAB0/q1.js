@@ -1,4 +1,5 @@
 const result = (function(exports, module){
+    
     exports = module.exports;
     exports.firstname = 'John';
     module.exports.lastname = 'Smith';

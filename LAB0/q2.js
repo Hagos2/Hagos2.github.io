@@ -13,14 +13,21 @@ class Student {
         this.lname = lastname;
     };
     save(){
-        db.push(this);
-        console.log("SAVE: ", db, "\n")
+        
+        const stu=db.find(user=>user.id===this.id);
+        if(stu){
+throw new Error('student already exist with id' + this.id)
+        }
+        else{
+            db.push(this);
+        }
+        console.log("SAVE: ", db, "\n") 
     };
     edit(){
         let obj= db.find(elem => elem.id==this.id)
         obj.fname= this.fname;
         obj.lname= this.lname;
-        console.log("EDIT: ", db,"\n")
+    
     };
     getById(id){
         let student= db.find(stud => stud.id==id)
@@ -35,9 +42,9 @@ class Student {
         return index+1;
     };
 };
-new Student(4, 'Paval', 'HAHA').save(); //save to db
+new Student(4, 'gebre', 'hagos').save(); //save to db
 new Student(4, 'Miss', 'Xing').edit() //edit studentId with id=4
-let paval= new Student();
-console.log("Student ", paval.deleteById(2), " removed! \n"); //remove studentId=4 from db
-console.log("All students: ", paval.getAll(), "\n"); //return db;
-console.log("Student with ID 1: ", paval.getById(1)); //return {id:1, fname: 'John', lname: 'Smith'}
+let gebre= new Student();
+console.log("Student ", gebre.deleteById(2), " removed! \n"); //remove studentId=4 from db
+console.log("All students: ", gebre.getAll(), "\n"); //return db;
+console.log("Student with ID 1: ", gebre.getById(1)); //return {id:1, fname: 'John', lname: 'Smith'}
