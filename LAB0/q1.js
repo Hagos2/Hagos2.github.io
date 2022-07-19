@@ -12,7 +12,7 @@ const result = (function(exports, module){
 }).apply(null, [null, {exports: {}}]);
 console.log(result);
 
-/*  result/output =
+/*  result/output :=
 {
 firstname: 'John' ,
 lastname:  'Smith'

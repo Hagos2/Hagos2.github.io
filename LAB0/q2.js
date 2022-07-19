@@ -37,6 +37,7 @@ throw new Error('student already exist with id' + this.id)
         return db;
     };
     deleteById(id){
+        // use splice
         let index= db.indexOf(db.find(stud => stud.id==id));
         db.splice(index,1);
         return index+1;
