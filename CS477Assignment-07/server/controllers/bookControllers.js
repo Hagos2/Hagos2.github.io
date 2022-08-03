@@ -3,7 +3,7 @@ const {ObjectId} = require('mongodb');
 
 exports.getAll = async (req, res, next) => {
     if(req.query.isbn) {
-        res.json(await Product.filterByIsbn(req.query.isbn));
+        res.json(await book .filterByIsbn(req.query.isbn));
     } else {
         res.json(await book.find());
     }
@@ -24,7 +24,7 @@ exports.save = async (req, res, next) => {
 }
 
 exports.update = async (req, res) => {
-    const result = await book.updateOne({_id: new ObjectId(req.params.id)} , req.body);
+    const result = await book.findBiIdAndUpdateOne({_id: new ObjectId(req.params.id)} , req.body);
     res.json(result);
 }
 

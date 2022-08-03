@@ -1,7 +1,7 @@
 /* eslint-disable*/
 
 const express = require('express');
-const bookController = require('../controllers/bookControllers');
+const bookControllers = require('../controllers/bookControllers');
 
 //bookController.js
 const router = express.Router();
